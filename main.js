@@ -1,7 +1,7 @@
 a = $('a')
 console.log(a)
 
-var uidblacklist = ['9236506','60153084'];
+var uidblacklist = ['9236506','60153084','60245090'];
 // var uidblacklist = ['993945'];   // fuckhjg for test
 
 for (i=0; i<a.length; i++){
