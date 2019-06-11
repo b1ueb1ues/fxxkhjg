@@ -1,7 +1,8 @@
 a = $('a')
 console.log(a)
 
-var uidblacklist = ['9236506','60153084','60245090'];
+var uidblacklist = ['9236506','60153084','60245090','42204110','1692565'];
+
 // var uidblacklist = ['993945'];   // fuckhjg for test
 
 for (i=0; i<a.length; i++){
@@ -11,7 +12,14 @@ for (i=0; i<a.length; i++){
 //	){
         //if (a[i].innerHTML == '993945' && a[i].name == 'uid'){
         for (j=0; j<uidblacklist.length; j++){
-                if (a[i].innerHTML == uidblacklist[j] && a[i].name == 'uid'){
+                path = '/nuke.php?func=ucp&uid=' + uidblacklist[j]
+                console.log(a[i].href)
+                console.log(path)
+                console.log('=========')
+                if (a[i].href == path ||
+                    a[i].href == 'http://bbs.nga.cn' + path ||
+                    a[i].href == 'https://bbs.nga.cn' + path
+                ){
                         console.log('--hjgfound')
                         tmp = a[i]
                         //console.log(a[i])
@@ -40,12 +48,13 @@ a = $('.author')
 console.log(a)
 for (i=0; i<a.length; i++){
         for(j=0; j<uidblacklist.length; j++){
+                path = '/nuke.php?func=ucp&uid='+uidblacklist[j]
                 console.log(a[i].href)
-                console.log('/nuke.php?func=ucp&uid='+uidblacklist[j])
+                console.log(path)
                 console.log('---------')
-                if (a[i].href == 'https://bbs.nga.cn/nuke.php?func=ucp&uid='+uidblacklist[j]
-                        || a[i].href == 'https://bbs.nga.cn/nuke.php?func=ucp&uid='+uidblacklist[j] 
-                        || a[i].href == '/nuke.php?func=ucp&uid='+uidblacklist[j] 
+                if (a[i].href == 'https://bbs.nga.cn' + path
+                        || a[i].href == 'http://bbs.nga.cn' + path
+                        || a[i].href == path
                         ){
         	//if (a[i].innerHTML == 'hjg719'){
                         console.log('--hjgfound')
