@@ -24,7 +24,7 @@ for (i=0; i<a.length; i++){
                         tmp = a[i]
                         //console.log(a[i])
 
-                        for(j=0; j<20; j++){
+                        for(k=0; k<20; k++){
                                 tmp = tmp.parentNode
                                 if (tmp == null){
                                         break
